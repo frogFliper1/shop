@@ -14,7 +14,7 @@ namespace Shop_ELECTRO.Data.DataBase
             {
                 List<Categorys> categorys = new List<Categorys>();
                 MySqlConnection MySqlConnection = Connection.MySqlOpen();
-                MySqlDataReader CategorysData = Connection.MySqlQuery("SELECT * FROM `pr37-40`.categorys ORDER BY 'Name';", MySqlConnection);
+                MySqlDataReader CategorysData = Connection.MySqlQuery("SELECT * FROM shop_e.categorys ORDER BY 'Name';", MySqlConnection);
                 while (CategorysData.Read())
                 {
                     categorys.Add(new Categorys()

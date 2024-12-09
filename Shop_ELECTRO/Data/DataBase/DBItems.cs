@@ -16,7 +16,7 @@ namespace Shop_ELECTRO.Data.DataBase
             {
                 List<Items> items = new List<Items>();
                 MySqlConnection MySqlConection = Connection.MySqlOpen();
-                MySqlDataReader ItemsData = Connection.MySqlQuery("SELECT * FROM `pr37-40`.items ORDER BY 'Name';", MySqlConection);
+                MySqlDataReader ItemsData = Connection.MySqlQuery("SELECT * FROM shop_e.items ORDER BY 'Name';", MySqlConection);
                 while (ItemsData.Read())
                 {
                     items.Add(new Items()
@@ -36,7 +36,7 @@ namespace Shop_ELECTRO.Data.DataBase
         public int Add(Items Item)
         {
             MySqlConnection MySqlConnection = Connection.MySqlOpen();
-            Connection.MySqlQuery($"INSERT INTO `pr37-40`.`items`(`Name`,`Description`,`Img`,`Price`,`IdCategory`) VALUES ('{Item.Name}', '{Item.Description}', '{Item.Img}', '{Item.Price}', '{Item.Category.Id}');", MySqlConnection);
+            Connection.MySqlQuery($"INSERT INTO shop_e.items(Name,Description,Img,Price,IdCategory) VALUES ('{Item.Name}', '{Item.Description}', '{Item.Img}', '{Item.Price}', '{Item.Category.Id}');", MySqlConnection);
             MySqlConnection.Close();
 
             int IdItem = -1;

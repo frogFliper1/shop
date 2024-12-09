@@ -4,7 +4,7 @@ namespace Shop_ELECTRO.Data.Common
 {
     public class Connection
     {
-        readonly static string ConnectionData = "server=localhost;uid=root;pwd=Asdfg123;database=pr37-40;";
+        readonly static string ConnectionData = "server=localhost;uid=root1;pwd=;database=shop_e;";
 
         public static MySqlConnection MySqlOpen()
         {

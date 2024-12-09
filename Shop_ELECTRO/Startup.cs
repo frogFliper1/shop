@@ -11,7 +11,7 @@ namespace Shop_ELECTRO
 {
     public class Startup
     {
-        //public static List<ItemsBasket> BasketItem = new List<ItemsBasket>();
+        public static List<ItemsBasket> BasketItem = new List<ItemsBasket>();
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IItems, DBItems>();
